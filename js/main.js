@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const moonIcon = document.querySelector('.fa-moon');
     const sunIcon = document.querySelector('.fa-sun');
 
-    // Check for saved theme preference or use preferred color scheme
+    // Check saved theme preference or use preferred color scheme
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -144,8 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
+            //send the form data to a server
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });

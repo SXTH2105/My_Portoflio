@@ -1,4 +1,3 @@
-/* Base Styles */
 :root {
     --primary-color: #ff2d55;
     --primary-light: rgba(255, 45, 85, 0.1);
@@ -84,7 +83,6 @@ img {
 }
 
 /* Header & Navigation */
-/* Update the header/navigation styles */
 header {
     position: fixed;
     top: 0;
@@ -111,13 +109,11 @@ nav {
     padding: 0 20px;
 }
 
-/* Add scroll effect */
+/*scroll effect */
 .header-scrolled {
     box-shadow: 0 2px 20px var(--shadow-color);
     padding: 15px 0;
 }
-
-/* Update dark theme header colors */
 .dark-theme .nav-links a {
     color: #f0f0f0;
 }
@@ -682,7 +678,7 @@ footer {
     }
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 992px) {
     .about-content {
         flex-direction: column;
