@@ -13,11 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const moonIcon = document.querySelector('.fa-moon');
     const sunIcon = document.querySelector('.fa-sun');
 
-    // Check saved theme preference or use preferred color scheme
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    // Set initial theme
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         enableDarkMode();
     } else {
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -68,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -109,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animate skill bars on scroll
     const skills = document.querySelectorAll('.skill');
     
     function animateSkills() {
@@ -132,12 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', animateSkills);
-    animateSkills(); // Run once on page load
-    
-    // Set current year in footer
+    animateSkills();   
     document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Form submission
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
